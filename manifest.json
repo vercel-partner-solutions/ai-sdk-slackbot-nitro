@@ -23,7 +23,7 @@
     "slash_commands": [
       {
         "command": "/sample-command",
-        "url": "https://your-slackbot-url.com/api/events",
+        "url": "https://edc589d23dfb.ngrok.app/api/events",
         "description": "Runs a sample command",
         "should_escape": false
       }
@@ -48,7 +48,7 @@
   },
   "settings": {
     "event_subscriptions": {
-      "request_url": "https://your-slackbot-url.com/api/events",
+      "request_url": "https://edc589d23dfb.ngrok.app/api/events",
       "bot_events": [
         "app_home_opened",
         "app_mention",
@@ -62,7 +62,7 @@
     },
     "interactivity": {
       "is_enabled": true,
-      "request_url": "https://your-slackbot-url.com/api/events"
+      "request_url": "https://edc589d23dfb.ngrok.app/api/events"
     },
     "org_deploy_enabled": true,
     "socket_mode_enabled": false,

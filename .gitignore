@@ -6,4 +6,5 @@ dist
 .output
 .env
 .vercel
+.vscode
 .env*.local

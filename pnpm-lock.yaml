@@ -17,6 +17,9 @@ importers:
       '@vercel/bolt':
         specifier: ^1.0.9
         version: 1.0.9(@slack/bolt@4.4.0(@types/express@5.0.3))
+      '@vercel/queue':
+        specifier: 0.0.0-alpha.15
+        version: 0.0.0-alpha.15
       ai:
         specifier: 5.0.0
         version: 5.0.0(zod@3.25.76)
@@ -961,6 +964,10 @@ packages:
   '@vercel/oidc@2.0.0':
     resolution: {integrity: sha512-U0hncpXof7gC9xtmSrjz6vrDqdwJXi8z/zSc9FyS80AoXKfCZtpkBz9gtL3x30Agmpxpwe35P1W2dP9Epa/RGA==}
     engines: {node: '>= 18'}
+
+  '@vercel/queue@0.0.0-alpha.15':
+    resolution: {integrity: sha512-VNX1MShSa5mp4h9bZNYi4ibxLaWQZ92NO1UYHfXAMiMJRn7rhuDOo+eNBIQKu52Pl+HZYLjstMfdeOiI+d1gdA==}
+    engines: {node: '>=20.0.0'}
 
   '@vue/compiler-core@3.5.18':
     resolution: {integrity: sha512-3slwjQrrV1TO8MoXgy3aynDQ7lslj5UqDxuHnrzHtpON5CBinhWjJETciPngpin/T3OuW3tXUf86tEurusnztw==}
@@ -2079,6 +2086,10 @@ packages:
   minizlib@3.0.2:
     resolution: {integrity: sha512-oG62iEk+CYt5Xj2YqI5Xi9xWUeZhDI8jjQmC5oThVH5JGCTgIjr7ciJDzC7MBzYd//WvR1OTmP5Q38Q8ShQtVA==}
     engines: {node: '>= 18'}
+
+  mixpart@0.0.5-alpha.0:
+    resolution: {integrity: sha512-XS3bfxqdHsxqLoK0DnkGiM++KZGhXFj8KrzfNND/4d0DDBkbVdmlEajIAOQ+2+tHVw2zFI1ng8SnJSOfVZg0HA==}
+    engines: {node: '>=22.0.0'}
 
   mkdirp@3.0.1:
     resolution: {integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==}
@@ -3780,6 +3791,10 @@ snapshots:
 
   '@vercel/oidc@2.0.0': {}
 
+  '@vercel/queue@0.0.0-alpha.15':
+    dependencies:
+      mixpart: 0.0.5-alpha.0
+
   '@vue/compiler-core@3.5.18':
     dependencies:
       '@babel/parser': 7.28.0
@@ -4925,6 +4940,8 @@ snapshots:
   minizlib@3.0.2:
     dependencies:
       minipass: 7.1.2
+
+  mixpart@0.0.5-alpha.0: {}
 
   mkdirp@3.0.1: {}
 

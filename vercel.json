@@ -1,0 +1,13 @@
+{
+    "functions": {
+      "api/queue.ts": {
+        "experimentalTriggers": [
+          {
+            "type": "queue/v1beta",
+            "topic": "messages",
+            "consumer": "im"
+          }
+        ]
+      }
+    }
+  }

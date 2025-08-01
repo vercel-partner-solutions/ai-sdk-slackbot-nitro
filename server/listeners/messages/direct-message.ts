@@ -3,6 +3,7 @@ import type { ModelMessage } from "ai";
 import { respondToMessage } from "~/lib/ai/respond-to-message";
 import { getChannelContextAsModelMessage } from "~/lib/slack/get-channel-context";
 import { getThreadContextAsModelMessage } from "~/lib/slack/get-thread-context";
+import { send } from "@vercel/queue";
 
 const directMessageCallback = async ({
   message,
@@ -20,6 +21,16 @@ const directMessageCallback = async ({
     logger.debug("Direct message event received:", event);
 
     let threadContext: ModelMessage[] = [];
+
+    // Send a message to a topic
+    await send("messages", {
+      type: "im",
+      text: message.text,
+      channel: message.channel,
+      user: message.user,
+      ts: message.ts,
+      thread_ts: "thread_ts" in message ? message.thread_ts : undefined,
+    });
 
     try {
       if ("thread_ts" in message && message.thread_ts) {

@@ -23,6 +23,7 @@
     "@slack/bolt": "^4.4.0",
     "@slack/web-api": "^7.9.3",
     "@vercel/bolt": "^1.0.9",
+    "@vercel/queue": "0.0.0-alpha.15",
     "ai": "5.0.0"
   }
 }
