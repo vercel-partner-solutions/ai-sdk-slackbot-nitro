@@ -43,8 +43,8 @@ _This command is still a work in progress. We're working with the Slack team to 
 1. In the terminal run `slack app link`
 2. Select your Slack team in the terminal
 3. Copy your App ID from the app you just created
-4 Select `Local` when prompted
-5. Open your [`config.json`](./.slack/config.json) file under `/.slack/config.json` and update your manifest source to `local`
+4. Select `Local` when prompted
+1. Open your [`config.json`](./.slack/config.json) file under `/.slack/config.json` and update your manifest source to `local`
 ```json
 {
   "manifest": {
@@ -53,9 +53,9 @@ _This command is still a work in progress. We're working with the Slack team to 
   "project_id": "<project-id-added-by-slack-cli>"
 }
 ```
-6. Start your local server with automatic tunneling using the `pnpm dev:tunnel` command. You can also use the generic `slack run` command if you do not want automatic tunneling and manifest updates. If prompted, select the workspace you'd like to grant access to. Select `yes` when asked _Update app settings with changes to the local manifest?_
+1. Start your local server with automatic tunneling using the `pnpm dev:tunnel` command. You can also use the generic `slack run` command if you do not want automatic tunneling and manifest updates. If prompted, select the workspace you'd like to grant access to. Select `yes` when asked _Update app settings with changes to the local manifest?_
 
-7. Open your Slack workspace and add your new Slack Agent to a channel. Your Slack Agent should respond whenever it's tagged in a message or sent a DM
+2. Open your Slack workspace and add your new Slack Agent to a channel. Your Slack Agent should respond whenever it's tagged in a message or sent a DM
 
 ## Deploy to Vercel
 1. Create a new Vercel project [here](https://www.vercel.com/new) or select _Add new..._ and _project_ from the Vercel dashboard

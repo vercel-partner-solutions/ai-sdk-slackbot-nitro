@@ -30,7 +30,7 @@ export const respondToMessage = async ({
 }: RespondToMessageOptions) => {
   try {
     const { text } = await generateText({
-      model: "openai/gpt-4o-mini",
+      model: "openai/gpt-5",
       system: `
 			You are Slack Agent, a friendly and professional agent for Slack.
       Always gather context from Slack before asking the user for clarification.
